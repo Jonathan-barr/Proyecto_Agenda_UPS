@@ -23,9 +23,10 @@ export class DatabaseService {
     return this.databases.createId();
   }
 
-  deleteTarea(path: string, id: string) {
-    const collection = this.databases.collection(path);
-    return collection.doc(id).delete();
+  deleteTarea<tipo>(path: string, id: string) {
+      const ref=this.databases.collection<tipo>(path);
+      return ref.doc(id).delete();
+ 
   }
   getCollectionChanges<tipo>(path: string): Observable<tipo[]> {
     const ref = this.databases.collection<tipo>(path);

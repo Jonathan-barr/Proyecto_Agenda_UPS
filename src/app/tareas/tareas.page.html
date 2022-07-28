@@ -38,18 +38,19 @@
         <ion-icon name="share-outLine"></ion-icon>
         <p>Compartir</p>
       </ion-item>
-      <ion-item button (click)="editItem(item)" routerLink="AddTask()"  >
+    <!---  Revisar funcionamineto
+       <ion-item button (click)="editItem(item)" routerLink="AddTask()"  >
         <ion-icon name="create"></ion-icon>
         <p>Editar</p>
-      </ion-item>
+      </ion-item>-->
       <ion-item>
         <ion-icon name="checkmark-outLine"></ion-icon>
         <p>Completada</p>
       </ion-item>
 
-      <ion-item button (click)="delete(i)">
+      <ion-item button (click)="delete(item)">
         <ion-icon name="trash-outLine"></ion-icon>
-        <p>Cancelar</p>
+        <p>Eliminar</p>
       </ion-item>
     </ion-row>
   </ion-card>

@@ -78,8 +78,10 @@ tareas: any[]=[];
     
   }
 
-  delete(index) {
-    this.todoList.splice(index, 1)
+  async delete(item:any) {
+   await this.database.deleteTarea<any>('Tareas', item.id).catch(res=>{
+    console.log(res)});
+    console.log('item eliminado', item)
   }
    editItem(item:any){
     this.database.setItem(item)
